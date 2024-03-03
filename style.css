@@ -1,0 +1,86 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #000000;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px;
+  font-size: 100px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.textoverlay2 {
+position: absolute;
+top: 10px; /* Adjust the top position of the text overlay */
+left: 10px; /* Adjust the left position of the text overlay */
+background-color: rgba(255, 255, 255, 0.7); /* Background color with transparency */
+padding: 5px 10px; /* Adjust padding as needed */
+border-radius: 5px;
+font-size: 16px;
+font-weight: bold;
+color: black;
+}
+
+.temperature {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
