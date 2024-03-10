@@ -6,7 +6,11 @@ body {
 
 body {
   background: #000000;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family:
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -15,7 +19,6 @@ body {
 .swiper {
   width: 100%;
   height: 100%;
-  
 }
 
 .swiper-slide {
@@ -30,7 +33,10 @@ body {
   align-items: center;
   position: relative;
 }
-
+.slide-content img {
+  width: 100%;
+  height: auto;
+}
 .text-overlay {
   position: absolute;
   top: 50%;
@@ -44,15 +50,20 @@ body {
 }
 
 .textoverlay2 {
-position: absolute;
-top: 10px; /* Adjust the top position of the text overlay */
-left: 10px; /* Adjust the left position of the text overlay */
-background-color: rgba(255, 255, 255, 0.7); /* Background color with transparency */
-padding: 5px 10px; /* Adjust padding as needed */
-border-radius: 5px;
-font-size: 16px;
-font-weight: bold;
-color: black;
+  position: absolute;
+  top: 10px; /* Adjust the top position of the text overlay */
+  left: 10px; /* Adjust the left position of the text overlay */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Background color with transparency */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
 }
 
 .temperature {
@@ -68,7 +79,7 @@ color: black;
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -77,10 +88,16 @@ color: black;
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 2s linear infinite;
+  display: none; /* Initially hide the loader */
+  z-index: 9999; /* Ensure the loader appears on top of other content */
+  animation: spin 2s linear infinite; /* Apply animation */
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
