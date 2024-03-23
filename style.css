@@ -93,15 +93,32 @@ body {
   animation: spin 2s linear infinite; /* Apply animation */
 }
 
-canvas { display: block; }
 .label {
   position: absolute;
   font-family: Arial, sans-serif;
-  font-size: 12px;
-  color: #ff0000;
+  font-size: 14px; /* Increase font size for better readability */
+  color: #ffffff; /* Text color */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 5px 10px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
   pointer-events: none; /* Make labels not interactable */
+  z-index: 1; /* Ensure labels appear above pins */
+  transform: translate(-50%, -50%); /* Center the labels over the pins */
 }
-.hidden{
+
+#closeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ff0000; /* Red color for close button */
+  cursor: pointer; /* Show cursor as pointer on hover */
+  z-index: 2; /* Ensure close button appears above other content */
+}
+
+.hidden {
   display: none;
 }
 

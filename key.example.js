@@ -1,4 +1,1 @@
-module.exports = {
-    apiKey: 'YOUR_API_KEY_HERE',
-
-};
+export const key = "KEY_HERE";
